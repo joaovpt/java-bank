@@ -9,7 +9,6 @@ import java.util.stream.Stream;
 
 import static br.com.dio.model.BankService.INVESTMENT;
 
-@ToString
 @Getter
 public class InvestmentWallet extends Wallet{
 
@@ -30,5 +29,11 @@ public class InvestmentWallet extends Wallet{
         this.money.addAll(money);
     }
 
-
+    @Override
+    public String toString() {
+        return super.toString() + "InvestmentWallet{" +
+                "investment=" + investment +
+                ", account=" + account +
+                '}';
+    }
 }
